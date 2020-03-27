@@ -1,0 +1,128 @@
+/* * {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+} */
+.calendar ul {
+    list-style: none;
+}
+
+.calendar {
+    background-color: white;
+    box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.4);
+    padding-bottom: 2px;
+}
+
+.calendar .month {
+    background-color: purple;
+    padding-top: 8px;
+    height: 128px;
+    text-align: center;
+    color: white;
+
+}
+.calendar #month {
+    color: white;
+
+}
+
+.calendar .month .prev,
+.calendar .month .next {
+    width: 32px;
+    padding: 32px;
+    /* position: absolute; */
+}
+
+
+.calendar .month .prev {
+    float: left;
+}
+
+.calendar .month .next {
+    float: right;
+
+}
+
+.calendar .month-label #month {
+    font-size: 20px;
+    padding-top: 16px;
+}
+
+.calendar .weekdays {
+    display: flex;
+    text-align: center;
+    background-color: #eee;
+    font-size: 14px;
+    margin-top: 0;
+}
+
+.calendar .weekdays li {
+    width: 14.2857%;
+    padding: 10px 0;
+    color: purple;
+    font-weight: bold;
+}
+
+.calendar .days {
+    padding: 8px 0;
+    /* background-color: gray; */
+}
+
+.calendar .days li {
+    text-align: center;
+    width: 14.2857%;
+    display: inline-block;
+    padding: 8px 0;
+    color: #444;
+}
+
+.calendar .days li.active {
+    color: purple;
+    font-weight: bold;
+    border-radius: 2px;
+}
+
+.calendar .days li.active::before {
+    position: absolute;
+    content: " ";
+    padding: 16px 24px;
+    transform: translate(-35%, -20%);
+    border: 2px solid purple;
+    border-radius: 4px;
+    box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2);
+}
+
+.calendar .today {
+    margin: 16px;
+    display: flex;
+}
+
+.calendar #today {
+    /* padding: 4px 8px; */
+    margin: 8px;
+    height: 32px;
+    width: 64px;
+    border: 2px solid purple;
+    border-radius: 4px;
+    background-color: white;
+    color: purple;
+    font-weight: bold;
+    box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2);
+    outline: none;
+}
+
+.calendar #today:hover {
+    background-color: rgba(128, 0, 128, 0.2);
+}
+
+.calendar #today:active {
+    color: white;
+    background-color: purple;
+}
+
+.calendar #text-today {
+    line-height: 48px;
+    margin-left: 32px 8px;
+    color: purple;
+}
